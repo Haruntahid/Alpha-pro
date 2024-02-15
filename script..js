@@ -33,8 +33,8 @@ function getInnerTextById(elementId) {
 }
 
 function updateValue(elementId, value) {
-  const getElement = document.getElementById(elementId);
-  getElement.innerText = value;
+  const element = document.getElementById(elementId);
+  element.innerText = value;
 }
 
 function getPressKey(event) {
@@ -48,11 +48,11 @@ function getPressKey(event) {
   }
 
   if (pressKeyValue === givenValue) {
-    play();
     removeKeyColor(givenValue);
     const score = getInnerTextById("score");
     const updateScore = score + 1;
     updateValue("score", updateScore);
+    continueGame();
   } else {
     const life = getInnerTextById("life");
     const updateLife = life - 1;
@@ -66,20 +66,20 @@ function getPressKey(event) {
 
 document.addEventListener("keyup", getPressKey);
 
-function play() {
-  hideSection("enter_game");
-  displaySection("playground");
-  hideSection("score_card");
-  updateValue("life", 5);
-  // updateValue("score", 0);
-  continueGame();
-}
-
 function continueGame() {
   let alpha = randomAlpha();
   let setAlpha = document.getElementById("generate_alpha");
   setAlpha.innerText = alpha;
   setKeyColor(alpha);
+}
+
+function play() {
+  hideSection("enter_game");
+  displaySection("playground");
+  hideSection("score_card");
+  updateValue("life", 5);
+  updateValue("score", 0);
+  continueGame();
 }
 
 function gameOver() {
