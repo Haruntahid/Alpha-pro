@@ -47,62 +47,63 @@
         <!-- keyboard -->
         <div>
           <div class="flex justify-center gap-1 my-1 w-full">
-            <kbd id="q" class="kbd">q</kbd>
-            <kbd id="w" class="kbd">w</kbd>
-            <kbd id="e" class="kbd">e</kbd>
-            <kbd id="r" class="kbd">r</kbd>
-            <kbd id="t" class="kbd">t</kbd>
-            <kbd id="y" class="kbd">y</kbd>
-            <kbd id="u" class="kbd">u</kbd>
-            <kbd id="i" class="kbd">i</kbd>
-            <kbd id="o" class="kbd">o</kbd>
-            <kbd id="p" class="kbd">p</kbd>
+            <kbd id="q" class="kbd uppercase">q</kbd>
+            <kbd id="w" class="kbd uppercase">w</kbd>
+            <kbd id="e" class="kbd uppercase">e</kbd>
+            <kbd id="r" class="kbd uppercase">r</kbd>
+            <kbd id="t" class="kbd uppercase">t</kbd>
+            <kbd id="y" class="kbd uppercase">y</kbd>
+            <kbd id="u" class="kbd uppercase">u</kbd>
+            <kbd id="i" class="kbd uppercase">i</kbd>
+            <kbd id="o" class="kbd uppercase">o</kbd>
+            <kbd id="p" class="kbd uppercase">p</kbd>
           </div>
           <div class="flex justify-center gap-1 my-1 w-full">
-            <kbd id="a" class="kbd">a</kbd>
-            <kbd id="s" class="kbd">s</kbd>
-            <kbd id="d" class="kbd">d</kbd>
-            <kbd id="f" class="kbd">f</kbd>
-            <kbd id="g" class="kbd">g</kbd>
-            <kbd id="h" class="kbd">h</kbd>
-            <kbd id="j" class="kbd">j</kbd>
-            <kbd id="k" class="kbd">k</kbd>
-            <kbd id="l" class="kbd">l</kbd>
+            <kbd id="a" class="kbd uppercase">a</kbd>
+            <kbd id="s" class="kbd uppercase">s</kbd>
+            <kbd id="d" class="kbd uppercase">d</kbd>
+            <kbd id="f" class="kbd uppercase">f</kbd>
+            <kbd id="g" class="kbd uppercase">g</kbd>
+            <kbd id="h" class="kbd uppercase">h</kbd>
+            <kbd id="j" class="kbd uppercase">j</kbd>
+            <kbd id="k" class="kbd uppercase">k</kbd>
+            <kbd id="l" class="kbd uppercase">l</kbd>
           </div>
           <div class="flex justify-center gap-1 my-1 w-full">
-            <kbd id="z" class="kbd">z</kbd>
-            <kbd id="x" class="kbd">x</kbd>
-            <kbd id="c" class="kbd">c</kbd>
-            <kbd id="v" class="kbd">v</kbd>
-            <kbd id="b" class="kbd">b</kbd>
-            <kbd id="n" class="kbd">n</kbd>
-            <kbd id="m" class="kbd">m</kbd>
-            <kbd id="/" class="kbd">/</kbd>
+            <kbd id="z" class="kbd uppercase">z</kbd>
+            <kbd id="x" class="kbd uppercase">x</kbd>
+            <kbd id="c" class="kbd uppercase">c</kbd>
+            <kbd id="v" class="kbd uppercase">v</kbd>
+            <kbd id="b" class="kbd uppercase">b</kbd>
+            <kbd id="n" class="kbd uppercase">n</kbd>
+            <kbd id="m" class="kbd uppercase">m</kbd>
+            <kbd id="/" class="kbd uppercase">/</kbd>
           </div>
         </div>
         <div class="flex justify-between w-3/6">
           <button class="btn bg-[#894189] text-white border-0">
             Life
             <img src="./images/heart.png" alt="" />
-            1
+            <span id="life">5</span>
           </button>
           <button class="btn bg-[#360490] text-white border-0">
             Score
             <img src="./images/price.png" alt="" />
-            1
+            <span id="score">0</span>
           </button>
         </div>
       </section>
       <!-- score Card -->
       <section
+        id="score_card"
         class="flex justify-center items-center flex-col min-h-screen hidden"
       >
         <div class="bg-[#360490] p-10 rounded-2xl text-center space-y-4">
           <div>
             <span class="text-white text-3xl font-bold">Score:</span>
-            <span class="text-white text-3xl">0</span>
+            <span id="final_score" class="text-white text-3xl">0</span>
           </div>
-          <button class="btn">Play Now</button>
+          <button onclick="play()" class="btn">Play Now</button>
           <p class="text-white">Practice will make you Pro</p>
         </div>
       </section>
